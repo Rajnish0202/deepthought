@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  padding: 1rem;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  background: #0073e6;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Header Section */
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 7em;
+  background: #f3f3f3;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #0073e6;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tools .blank {
+  background: #a1a1a1;
+}
+
+.tools .more {
+  background: transparent;
+  color: #0073e6;
+  font-size: 24px;
+  margin-left: 0;
+}
+
+/* Task Section */
+
+.task {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.left {
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-right-radius: 15px;
+  background: #fff;
+}
+
+.left.active {
+  position: absolute;
+  width: 250px;
+  z-index: 2;
+  transition: all 0.5s linear;
+  height: 100%;
+}
+
+.left .bars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+}
+
+.left .bars p {
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 100px;
+  display: none;
+  margin-left: 2rem;
+}
+
+.left .bars p.active {
+  display: initial;
+  transition: all 0.5s linear;
+}
+
+.left .bars .bar {
+  font-size: 20px;
+}
+
+.left .page {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.left .page .number {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0073e6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left .page.active {
+  display: none;
+  transition: all 0.5s linear;
+}
+
+.left .page .number span {
+  font-size: 14px;
+  color: #0073e6;
+  font-weight: 600;
+}
+
+.left .list {
+  display: none;
+}
+
+.left .list.active {
+  display: initial;
+  transition: all 0.5s linear;
+}
+
+.left .list .list_heading {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+.left .list .list_heading p {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.85px;
+  padding: 0.5rem 0;
+}
+
+.left .list .list_heading p span {
+  border-bottom: 1px solid #a1a1a1;
+  line-height: 1.5;
+}
+.left .list ul {
+  width: 100%;
+}
+
+.left .list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left .list ul li a {
+  text-transform: capitalize;
+  padding: 5px 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.85px;
+  border-bottom: 1px solid #a1a1a1;
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-right: 1rem;
+}
+
+.container .project {
+  width: 100%;
+  padding: 1rem;
+  background: #0073e6;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 400;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-transform: capitalize;
+}
+
+.task_container {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.task_container .heading {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.task_container .heading .name {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.assets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+
+.asset {
+  padding: 0.5rem;
+}
+
+.asset .subheading {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background: #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #fff;
+}
+
+.asset .subheading p {
+  padding: 5px 0;
+  text-transform: capitalize;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.asset .box {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.asset .text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.85px;
+}
+
+.asset .box textarea {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.asset .box textarea::placeholder {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #a1a1a1;
+  letter-spacing: 0.85px;
+}
+
+.asset .box .submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.asset .box .bigdata {
+  width: 100%;
+  height: 400px;
+}
+.asset .box .bigdata embed {
+  width: 100%;
+  height: 100%;
+}
+
+.asset .box .image {
+  width: 100%;
+}
+
+.asset .box .image img {
+  width: 100%;
+}
+
+.asset .box .sharing {
+  width: 100%;
+}
+
+.asset .box .sharing embed {
+  width: 100%;
+}
+
+.asset .box .light {
+  font-weight: normal;
+  padding: 0.5rem 0;
+}
+
+.asset .box .video {
+  width: 100%;
+  height: 250px;
+}
+
+.asset .box .video embed {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  margin: 1rem 0;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.dropdown i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown .up {
+  display: none;
+}
+
+.dropdown .up.active {
+  display: initial;
+  transition: all 0.5s linear;
+}
+
+.dropdown .down.active {
+  display: none;
+  transition: all 0.5s linear;
+}
+
+.dropbox {
+  display: none;
+}
+
+.dropbox.active {
+  display: initial;
+}
+
+.dropbox p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.submit_task {
+  padding: 0 2.5rem;
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .assets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  nav .logo {
+    width: 10rem;
+  }
+
+  nav .logo img {
+    width: 100%;
+  }
+
+  .assets {
+    padding: 0;
+  }
+}
